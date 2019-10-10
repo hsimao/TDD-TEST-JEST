@@ -16,11 +16,10 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/$1'
   },
   snapshotSerializers: ['jest-serializer-vue'],
-  // 需要執行的測試檔案, 以下配置會針對所有 tests/unit資料夾底下的所有 .spec.js .spec.jsx .spec.ts .spec.tsx 檔案來運行測試
-  // 或 __tests__/ 資料夾底下的所有 .js .jsx .ts .tsx 檔案
-  testMatch: [
-    '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
-  ],
+  // 需要執行的測試檔案, 以下配置會針對所有 __tests__/ 資料夾底下的所有 .js .jsx .ts .tsx 檔案來運行測試
+  testMatch: ['**/__tests__/**/*.(js|jsx|ts|tsx)'],
+  // 排除 .eslintrc.js 檔案，不把它當成測試文件
+  testPathIgnorePatterns: ['.eslintrc.js'],
   // window、jsDOM 位置
   testURL: 'http://localhost/',
   watchPlugins: [

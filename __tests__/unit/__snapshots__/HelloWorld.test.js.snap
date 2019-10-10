@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelloWorld.vue 檢查組件是否渲染正常 1`] = `
+<div class="mmm">
+  <h1>dell</h1>
+</div>
+`;
