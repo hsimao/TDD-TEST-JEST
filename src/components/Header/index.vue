@@ -17,6 +17,7 @@ export default {
     handleInput() {
       if (this.inputValue) {
         this.$emit('add', this.inputValue)
+
         this.inputValue = ''
       }
     }
