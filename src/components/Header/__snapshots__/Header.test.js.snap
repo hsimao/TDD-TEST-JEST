@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header DOM 節點快照發生改變, 請確認 1`] = `
+<div class="header">
+  <div class="header__content">
+    TodoList
+    <input type="text" data-test="input" placeholder="TodoItem" class="header__input"></div>
+</div>
+`;

@@ -46,3 +46,9 @@ it('input 欄位輸入 enter, 若為有值時需要送出 add 事件, 同時清�
   expect(wrapper.emitted().add).toBeTruthy() // toBeTruthy 有觸發
   expect(wrapper.vm.$data.inputValue).toBe('')
 })
+
+// 樣式修改提示
+it('Header DOM 節點快照發生改變, 請確認', () => {
+  const wrapper = shallowMount(Header)
+  expect(wrapper).toMatchSnapshot()
+})
