@@ -3,19 +3,20 @@
     <Header @add="handleAddTodo" />
     <h1>TodoList</h1>
     <h1>list</h1>
-    <ul>
-      <li v-for="(todo, index) in todos" :key="index">{{todo}}</li>
-    </ul>
+    <Content :items="todos"
+      @delete="handleDelete" />
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header'
+import Header from './components/Header'
+import Content from './components/Content'
 
 export default {
   name: 'TodoList',
   components: {
-    Header
+    Header,
+    Content
   },
   data() {
     return {
@@ -25,6 +26,9 @@ export default {
   methods: {
     handleAddTodo(val) {
       this.todos.push(val)
+    },
+    handleDelete(index) {
+      this.todos.splice(index, 1)
     }
   }
 }
